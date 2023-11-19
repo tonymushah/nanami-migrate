@@ -8,6 +8,12 @@ pub enum Type {
     Specific(String)
 }
 
+impl Type {
+    pub fn void() -> Self{
+        Self::Specific(String::from("void"))
+    }
+}
+
 impl Display for Type {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
